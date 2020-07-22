@@ -6,6 +6,11 @@ extern Hassel::Application* Hassel::CreateApplication();
 
 int main(int argc, char** argv)
 {
+	Hassel::Log::Init();
+	HASSEL_CORE_WARN("Initialized Log!");
+	int a = 5;
+	HASSEL_INFO("Hello! Var ={0}", a);
+
 	auto app = Hassel::CreateApplication();
 	app->Run();
 	delete app;
