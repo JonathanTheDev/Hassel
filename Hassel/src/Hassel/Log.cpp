@@ -11,10 +11,10 @@ namespace Hassel {
 		spdlog::set_pattern("%^[%T] %n: %v%$");
 
 		s_CoreLogger = spdlog::stdout_color_mt("Hassel");
-		s_CoreLogger->set_level(spdlog::level::trace);
 		
 		s_ClientLogger = spdlog::stdout_color_mt("App");
-		s_CoreLogger->set_level(spdlog::level::trace);
 
+		Log::GetCoreLogger()->set_level(spdlog::level::trace);
+		Log::GetClientLogger()->set_level(spdlog::level::trace);
 	}
 }

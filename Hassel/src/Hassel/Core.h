@@ -11,3 +11,5 @@
 #else
 #error Hassel only support Windows!
 #endif // HASSEL_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

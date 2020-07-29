@@ -4,6 +4,9 @@
     <Filter Include="Hassel">
       <UniqueIdentifier>{25C1EEB6-1163-198D-FA1D-2DE1E65EA0DD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hassel\Events">
+      <UniqueIdentifier>{6911A571-D5D1-20A8-9E0C-6A250A8C6584}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hassel.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Hassel\EntryPoint.h">
       <Filter>Hassel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Events\ApplicationEvent.h">
+      <Filter>Hassel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Events\Event.h">
+      <Filter>Hassel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Events\KeyEvent.h">
+      <Filter>Hassel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Events\MouseEvent.h">
+      <Filter>Hassel\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Hassel\Log.h">
       <Filter>Hassel</Filter>
