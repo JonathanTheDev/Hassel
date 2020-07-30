@@ -1,5 +1,6 @@
 #pragma once
 
+
 #ifdef HASSEL_PLATFORM_WINDOWS
 
 #ifdef HASSEL_BUILD_DLL

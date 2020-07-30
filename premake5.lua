@@ -64,15 +64,18 @@ project "Hassel"
 
     filter "configurations:Debug"
         defines "HSL_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "HSL_RELEASE"
-        symbols "On"
+        buildoptions "/MD"
+        optimize "On"
 
     filter "configurations:Dist"
+        buildoptions "/MD"
         defines "HSL_DIST"
-        symbols "On"
+        optimize "On"
 
 project "Sandbox"
     location "Sandbox"
@@ -111,12 +114,15 @@ project "Sandbox"
         
     filter "configurations:Debug"
         defines "HSL_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "HSL_RELEASE"
-        symbols "On"
+        buildoptions "/MD"
+        optimize "On"
 
     filter "configurations:Dist"
         defines "HSL_DIST"
-        symbols "On"
+        buildoptions "/MD"
+        optimize "On"

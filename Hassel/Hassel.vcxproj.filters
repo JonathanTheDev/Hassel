@@ -31,21 +31,35 @@
     <ClInclude Include="src\Hassel\Events\MouseEvent.h">
       <Filter>Hassel\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hassel\Layer.h">
+      <Filter>Hassel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\LayerStack.h">
+      <Filter>Hassel</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hassel\Log.h">
       <Filter>Hassel</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hassel\Window.h">
+      <Filter>Hassel</Filter>
+    </ClInclude>
     <ClInclude Include="src\hslpch.h" />
-    <ClInclude Include="src\Hassel\Window.h" />
-    <ClInclude Include="WindowsWindow.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hassel\Application.cpp">
+      <Filter>Hassel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hassel\Layer.cpp">
+      <Filter>Hassel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hassel\LayerStack.cpp">
       <Filter>Hassel</Filter>
     </ClCompile>
     <ClCompile Include="src\Hassel\Log.cpp">
       <Filter>Hassel</Filter>
     </ClCompile>
     <ClCompile Include="src\hslpch.cpp" />
-    <ClCompile Include="WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
