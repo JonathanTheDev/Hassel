@@ -3,6 +3,9 @@
 #include "Core.h"
 #include "Window.h"
 
+#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
+
 namespace Hassel {
 
 	class HASSEL_API Application
@@ -13,7 +16,10 @@ namespace Hassel {
 
 		void Run();
 
+		void OnEvent(Event& e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window>  m_Window;
 		bool m_Running = true;
 	};
