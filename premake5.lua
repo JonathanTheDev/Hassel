@@ -11,6 +11,11 @@ workspace "Hassel"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hassel/vendor/GLFW/include"
+
+include "Hassel/vendor/GLFW_premake5.lua"
+
 project "Hassel"
     location "Hassel"
     kind "SharedLib"
@@ -31,7 +36,14 @@ project "Hassel"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
