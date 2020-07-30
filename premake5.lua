@@ -19,6 +19,9 @@ project "Hassel"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "hslpch.h"
+    pchsource "%{prj.name}/src/hslpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

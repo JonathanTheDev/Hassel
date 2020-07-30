@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Hassel
 {
 	class HASSEL_API WindowResizeEvent : public Event

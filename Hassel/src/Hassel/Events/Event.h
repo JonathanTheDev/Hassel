@@ -2,9 +2,6 @@
 
 #include  "Hassel/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Hassel
 {
 
