@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hassel/vendor/GLFW/include"
+IncludeDir["Glad"] = "Hassel/vendor/Glad/include"
 
 include "Hassel/vendor/GLFW_premake5.lua"
+include "Hassel/vendor/Glad_premake5.lua"
 
 project "Hassel"
     location "Hassel"
@@ -37,12 +39,14 @@ project "Hassel"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -54,7 +58,8 @@ project "Hassel"
         defines
         {
             "HASSEL_PLATFORM_WINDOWS",
-            "HASSEL_BUILD_DLL"
+            "HASSEL_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
         
         postbuildcommands
