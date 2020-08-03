@@ -13,6 +13,10 @@
 #error Hassel only support Windows!
 #endif // HASSEL_PLATFORM_WINDOWS
 
+#ifdef HSL_DEBUG
+#define HSL_ENABLE_ASSERTS
+#endif
+
 #ifdef HSL_ENABLE_ASSERTS
 #define HSL_ASSERT(x, ...) { if(!(x)) { HSL_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #define HZ_CORE_ASSERT(x, ...) { if(!(x)) { HSL_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
