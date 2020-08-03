@@ -24,6 +24,7 @@ project "Hassel"
     location "Hassel"
     kind "SharedLib"
     language "C++"
+    staticruntime "Off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +57,6 @@ project "Hassel"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines
@@ -90,6 +90,7 @@ project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "Off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -113,7 +114,6 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
 
         defines
@@ -123,15 +123,15 @@ project "Sandbox"
         
     filter "configurations:Debug"
         defines "HSL_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "HSL_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "HSL_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
