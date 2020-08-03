@@ -23,6 +23,7 @@ class Sandbox : public Hassel::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Hassel::ImGuiLayer());
 	}
 
 	~Sandbox() {

@@ -4,3 +4,6 @@
 [submodule "Hassel/vendor/GLFW"]
 	path = Hassel/vendor/GLFW
 	url = https://github.com/glfw/glfw
+[submodule "Hassel/Vendor/ImGui"]
+	path = Hassel/Vendor/ImGui
+	url = https://github.com/ocornut/imgui
