@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Hassel/vendor/GLFW/include"
 IncludeDir["Glad"] = "Hassel/vendor/Glad/include"
 IncludeDir["ImGui"] = "Hassel/vendor/ImGui"
+IncludeDir["glm"] = "Hassel/vendor/glm"
 
 group "Dependencies"
     include "Hassel/vendor/GLFW_premake5.lua"
@@ -46,7 +47,8 @@ project "Hassel"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
     }
 
     links
@@ -106,7 +108,8 @@ project "Sandbox"
     includedirs
     {
         "Hassel/vendor/spdlog/include",
-        "Hassel/src"
+        "Hassel/src",
+        "%{IncludeDir.glm}"
     }
 
     links

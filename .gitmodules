@@ -7,3 +7,6 @@
 [submodule "Hassel/Vendor/ImGui"]
 	path = Hassel/Vendor/ImGui
 	url = https://github.com/ocornut/imgui
+[submodule "Hassel/Vendor/glm"]
+	path = Hassel/Vendor/glm
+	url = https://github.com/g-truc/glm

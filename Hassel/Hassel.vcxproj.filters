@@ -46,6 +46,12 @@
     <ClInclude Include="src\Hassel\ImGui\ImGuiLayer.h">
       <Filter>Hassel\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hassel\Input.h">
+      <Filter>Hassel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\KeyCodes.h">
+      <Filter>Hassel</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hassel\Layer.h">
       <Filter>Hassel</Filter>
     </ClInclude>
@@ -55,20 +61,22 @@
     <ClInclude Include="src\Hassel\Log.h">
       <Filter>Hassel</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hassel\MouseButtonCodes.h">
+      <Filter>Hassel</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hassel\Window.h">
       <Filter>Hassel</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hslpch.h" />
-    <ClInclude Include="src\Hassel\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Hassel\KeyCodes.h" />
-    <ClInclude Include="src\Hassel\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hassel\Application.cpp">
@@ -89,10 +97,12 @@
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hslpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
