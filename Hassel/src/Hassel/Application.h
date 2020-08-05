@@ -7,6 +7,8 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "Hassel/ImGui/ImGuiLayer.h"
+
 namespace Hassel {
 
 	class HASSEL_API Application
@@ -29,6 +31,7 @@ namespace Hassel {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window>  m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

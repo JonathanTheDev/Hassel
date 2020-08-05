@@ -109,6 +109,7 @@ project "Sandbox"
     {
         "Hassel/vendor/spdlog/include",
         "Hassel/src",
+        "Hassel/vendor",
         "%{IncludeDir.glm}"
     }
 

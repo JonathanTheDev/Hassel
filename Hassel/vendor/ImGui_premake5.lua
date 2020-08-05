@@ -15,7 +15,7 @@ project "ImGui"
         "%{prj.name}/imgui_widgets.cpp",
         "%{prj.name}/imstb_rectpack.h",
         "%{prj.name}/imstb_textedit.h",
-        "%{prj.name}/imstb_turetype.h",
+        "%{prj.name}/imstb_truetype.h",
         "%{prj.name}/imgui_demo.cpp"
     }
 
