@@ -28,14 +28,14 @@ namespace Hassel
 	{
 		auto [xPos, yPos] = GetMousePositionImpl();
 
-		return (float)xPos;
+		return xPos;
 	}
 
 	float WindowsInput::GetMouseYImpl()
 	{
 		auto [xPos, yPos] = GetMousePositionImpl();
 
-		return (float)yPos;
+		return yPos;
 	}
 	std::tuple<float, float> WindowsInput::GetMousePositionImpl()
 	{
@@ -43,7 +43,7 @@ namespace Hassel
 		double xPos, yPos;
 		glfwGetCursorPos(window, &xPos, &yPos);
 
-		return std::tuple<float, float>(xPos, yPos);
+		return std::tuple<float, float>((float)xPos, (float)yPos);
 	}
 }
 
