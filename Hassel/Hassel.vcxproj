@@ -140,6 +140,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Hassel.h" />
     <ClInclude Include="src\Hassel\Application.h" />
     <ClInclude Include="src\Hassel\Core.h" />
@@ -155,12 +156,14 @@
     <ClInclude Include="src\Hassel\LayerStack.h" />
     <ClInclude Include="src\Hassel\Log.h" />
     <ClInclude Include="src\Hassel\MouseButtonCodes.h" />
+    <ClInclude Include="src\Hassel\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Hassel\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hslpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Hassel\Application.cpp" />
     <ClCompile Include="src\Hassel\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Hassel\ImGui\ImGuiLayer.cpp" />

@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Hassel/Window.h"
+#include "Hassel/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
+
 
 namespace Hassel
 {
@@ -28,6 +30,7 @@ namespace Hassel
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
+		GraphicsContext* m_Context;
 
 		GLFWwindow* m_Window;
 
