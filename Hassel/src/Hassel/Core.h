@@ -21,10 +21,10 @@
 
 #ifdef HSL_ENABLE_ASSERTS
 	#define HSL_ASSERT(x, ...) { if(!(x)) { HSL_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
-	#define HZ_CORE_ASSERT(x, ...) { if(!(x)) { HSL_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define HSL_CORE_ASSERT(x, ...) { if(!(x)) { HSL_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
 	#define HSL_ASSERT(x, ...)
-	#define HZ_CORE_ASSERT(x, ...)
+	#define HSL_CORE_ASSERT(x, ...)
 #endif
 
 #define BIT(x) (1 << x)

@@ -73,6 +73,7 @@
     <ClInclude Include="src\hslpch.h" />
     <ClInclude Include="src\Hassel\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Hassel\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hassel\Application.cpp">
@@ -101,5 +102,6 @@
     </ClCompile>
     <ClCompile Include="src\hslpch.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Hassel\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

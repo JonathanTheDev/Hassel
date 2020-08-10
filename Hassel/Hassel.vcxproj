@@ -140,6 +140,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Hassel\Renderer\Shader.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Hassel.h" />
     <ClInclude Include="src\Hassel\Application.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="src\hslpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Hassel\Renderer\Shader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Hassel\Application.cpp" />
     <ClCompile Include="src\Hassel\ImGui\ImGuiBuild.cpp" />
