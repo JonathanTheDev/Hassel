@@ -162,6 +162,7 @@
     <ClInclude Include="src\Hassel\MouseButtonCodes.h" />
     <ClInclude Include="src\Hassel\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Hassel\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hslpch.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="src\Hassel\Layer.cpp" />
     <ClCompile Include="src\Hassel\LayerStack.cpp" />
     <ClCompile Include="src\Hassel\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hslpch.cpp">

@@ -7,6 +7,7 @@ namespace Hassel
 {
 	//////////////////////////////////////
 	// VertexBuffer	//////////////////////
+#pragma region VertexBuffer
 
 	OpenGLVertexBuffer::OpenGLVertexBuffer(float* verticies, uint32_t size)
 	{
@@ -30,8 +31,11 @@ namespace Hassel
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 
+#pragma endregion
+
 	//////////////////////////////////////
 	// IndexBuffer	//////////////////////
+#pragma region IndexBuffer
 
 	OpenGLIndexBuffer::OpenGLIndexBuffer(uint32_t* indicies, uint32_t count)
 		: m_Count(count)
@@ -55,5 +59,7 @@ namespace Hassel
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
+
+#pragma endregion
 
 }
