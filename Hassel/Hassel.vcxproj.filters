@@ -10,8 +10,14 @@
     <Filter Include="Hassel\ImGui">
       <UniqueIdentifier>{0FBE6EEC-FB20-FE90-A4A6-364790E8C913}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hassel\Renderer">
+      <UniqueIdentifier>{6B1E2A66-D7A9-972A-E0BA-1A1F4CC5F32A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -61,8 +67,29 @@
     <ClInclude Include="src\Hassel\MouseButtonCodes.h">
       <Filter>Hassel</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hassel\Renderer\Buffer.h">
+      <Filter>Hassel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Renderer\GraphicsContext.h">
+      <Filter>Hassel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Renderer\Renderer.h">
+      <Filter>Hassel\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hassel\Renderer\Shader.h">
+      <Filter>Hassel\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hassel\Window.h">
       <Filter>Hassel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
+      <Filter>Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>Platform\Windows</Filter>
@@ -71,13 +98,6 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hslpch.h" />
-    <ClInclude Include="src\Hassel\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Hassel\Renderer\Shader.h" />
-    <ClInclude Include="src\Hassel\Renderer\Buffer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Hassel\Renderer\Renderer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hassel\Application.cpp">
@@ -98,6 +118,24 @@
     <ClCompile Include="src\Hassel\Log.cpp">
       <Filter>Hassel</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hassel\Renderer\Buffer.cpp">
+      <Filter>Hassel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hassel\Renderer\Renderer.cpp">
+      <Filter>Hassel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hassel\Renderer\Shader.cpp">
+      <Filter>Hassel\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
@@ -105,11 +143,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hslpch.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\Hassel\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Hassel\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Hassel\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>
