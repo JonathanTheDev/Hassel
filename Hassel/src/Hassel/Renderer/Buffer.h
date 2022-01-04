@@ -12,29 +12,17 @@ namespace Hassel
 		switch (type)
 		{
 		case Hassel::ShaderDataType::None:		return 0;
-			break;
 		case Hassel::ShaderDataType::Float:		return 4;
-			break;
 		case Hassel::ShaderDataType::Float2:	return 4 * 2;
-			break;
 		case Hassel::ShaderDataType::Float3:	return 4 * 3;
-			break;
 		case Hassel::ShaderDataType::Float4:	return 4 * 4;
-			break;
 		case Hassel::ShaderDataType::Mat3:		return 4 * 3 * 3;
-			break;
 		case Hassel::ShaderDataType::Mat4:		return 4 * 4 * 4;
-			break;
 		case Hassel::ShaderDataType::Int:		return 4;
-			break;
 		case Hassel::ShaderDataType::Int2:		return 4 * 2;
-			break;
 		case Hassel::ShaderDataType::Int3:		return 4 * 3;
-			break;
 		case Hassel::ShaderDataType::Int4:		return 4 * 4;
-			break;
 		case Hassel::ShaderDataType::Bool:		return 1;
-			break;
 		}
 
 		HSL_CORE_ASSERT(false, "Unknown ShaderDataType!");
@@ -61,29 +49,17 @@ namespace Hassel
 			switch (Type)
 			{
 			case Hassel::ShaderDataType::None:		return 0;
-				break;
 			case Hassel::ShaderDataType::Float:		return 1;
-				break;
 			case Hassel::ShaderDataType::Float2:	return 2;
-				break;
 			case Hassel::ShaderDataType::Float3:	return 3;
-				break;
 			case Hassel::ShaderDataType::Float4:	return 4;
-				break;
 			case Hassel::ShaderDataType::Mat3:		return 9;
-				break;
 			case Hassel::ShaderDataType::Mat4:		return 16;
-				break;
 			case Hassel::ShaderDataType::Int:		return 1;
-				break;
 			case Hassel::ShaderDataType::Int2:		return 2;
-				break;
 			case Hassel::ShaderDataType::Int3:		return 3;
-				break;
 			case Hassel::ShaderDataType::Int4:		return 4;
-				break;
 			case Hassel::ShaderDataType::Bool:		return 1;
-				break;
 			}
 
 			HSL_CORE_ASSERT(false, "Unknown ShaderDataType!");
