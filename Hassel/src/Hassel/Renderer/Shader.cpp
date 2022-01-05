@@ -10,8 +10,8 @@ namespace Hassel
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:		HSL_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
-		case RendererAPI::OpenGL:	return new OpenGLShader(vertexSrc, fragmentSrc);
+		case RendererAPI::API::None:		HSL_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
+		case RendererAPI::API::OpenGL:	return new OpenGLShader(vertexSrc, fragmentSrc);
 		}
 
 		HSL_CORE_ASSERT(false, "Unknown RendererAPI!");

@@ -11,8 +11,8 @@ namespace Hassel
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:		HSL_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
-		case RendererAPI::OpenGL:	return new OpenGLVertexBuffer(verticies, size);
+		case RendererAPI::API::None:		HSL_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
+		case RendererAPI::API::OpenGL:	return new OpenGLVertexBuffer(verticies, size);
 		}
 
 		HSL_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -23,8 +23,8 @@ namespace Hassel
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:		HSL_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
-		case RendererAPI::OpenGL:	return new OpenGLIndexBuffer(indicies, count);
+		case RendererAPI::API::None:		HSL_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
+		case RendererAPI::API::OpenGL:	return new OpenGLIndexBuffer(indicies, count);
 		}
 
 		HSL_CORE_ASSERT(false, "Unknown RendererAPI!");
