@@ -13,6 +13,9 @@
 #include "Hassel/Renderer/Buffer.h"
 #include <Hassel/Renderer/VertexArray.h>
 
+#include "Hassel/Renderer/OrthographicCamera.h"
+
+
 namespace Hassel {
 
 	class HASSEL_API Application
@@ -44,6 +47,8 @@ namespace Hassel {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 
 	private:
 		static Application* s_Instance;

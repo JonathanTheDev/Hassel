@@ -103,6 +103,7 @@
     <ClInclude Include="src\Hassel\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Hassel\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
+    <ClInclude Include="src\Hassel\Renderer\OrthographicCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hassel\Application.cpp">
@@ -153,5 +154,6 @@
     <ClCompile Include="src\Hassel\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Hassel\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
+    <ClCompile Include="src\Hassel\Renderer\OrthographicCamera.cpp" />
   </ItemGroup>
 </Project>
