@@ -9,16 +9,9 @@
 
 #include "Hassel/ImGui/ImGuiLayer.h"
 
-#include "Hassel/Renderer/Shader.h"
-#include "Hassel/Renderer/Buffer.h"
-#include <Hassel/Renderer/VertexArray.h>
-
-#include "Hassel/Renderer/OrthographicCamera.h"
-
-
 namespace Hassel {
 
-	class HASSEL_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -41,14 +34,6 @@ namespace Hassel {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 
 	private:
 		static Application* s_Instance;

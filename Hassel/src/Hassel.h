@@ -12,6 +12,16 @@
 
 #include "Hassel/ImGui/ImGuiLayer.h"
 
-// ----Entry point -----
+// ----Renderer-----
+#include "Hassel/Renderer/Renderer.h"
+#include "Hassel/Renderer/RenderCommand.h"
+
+#include "Hassel/Renderer/Buffer.h"
+#include "Hassel/Renderer/Shader.h"
+#include "Hassel/Renderer/VertexArray.h"
+
+#include "Hassel/Renderer/OrthographicCamera.h"
+
+// ----Entry point-----
 #include "Hassel/EntryPoint.h"
 // ---------------------
