@@ -2,6 +2,7 @@
 
 #include "Hassel/Core.h"
 #include "Hassel/Events/Event.h"
+#include "Hassel/Core/Timestep.h"
 
 namespace Hassel
 {
@@ -13,7 +14,7 @@ namespace Hassel
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate(double delta) {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

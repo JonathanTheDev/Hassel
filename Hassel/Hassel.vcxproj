@@ -143,6 +143,7 @@
     <ClInclude Include="src\Hassel.h" />
     <ClInclude Include="src\Hassel\Application.h" />
     <ClInclude Include="src\Hassel\Core.h" />
+    <ClInclude Include="src\Hassel\Core\Timestep.h" />
     <ClInclude Include="src\Hassel\EntryPoint.h" />
     <ClInclude Include="src\Hassel\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Hassel\Events\Event.h" />

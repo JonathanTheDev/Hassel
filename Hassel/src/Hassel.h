@@ -6,6 +6,8 @@
 #include "Hassel/Layer.h"
 #include "Hassel/Log.h"
 
+#include "Hassel/Core/Timestep.h"
+
 #include "Hassel/Input.h"
 #include "Hassel/KeyCodes.h"
 #include "Hassel/MouseButtonCodes.h"

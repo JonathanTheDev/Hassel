@@ -5,6 +5,7 @@
 #include "Log.h"
 
 #include "Hassel/Renderer/Renderer.h"
+#include <GLFW/glfw3.h>
 
 namespace Hassel
 {
@@ -20,6 +21,7 @@ namespace Hassel
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_Window->SetVSync(false);
 
 		m_ImGuiLayer = new ImGuiLayer;
 		PushOverlay(m_ImGuiLayer);
@@ -56,15 +58,14 @@ namespace Hassel
 
 	void Application::Run()
 	{
-		auto lastTime = std::chrono::system_clock::now();
-
 		while (m_Running)
 		{
-			std::chrono::duration<double> deltaTime = std::chrono::system_clock::now() - lastTime;
-			double delta = deltaTime.count();
-			
+			float time = (float)glfwGetTime();
+			Timestep timestep = time - m_LastFrameTime;
+			m_LastFrameTime = time;
+
 			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate(delta);
+				layer->OnUpdate(timestep);
 
 			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack)

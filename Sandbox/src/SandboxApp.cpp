@@ -122,21 +122,21 @@ public:
 		m_BlueShader.reset(Hassel::Shader::Create(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
 
-	void OnUpdate(double delta) override
+	void OnUpdate(Hassel::Timestep ts) override
 	{
 		if (Hassel::Input::IsKeyPressed(HSL_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed * delta;
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 		else if (Hassel::Input::IsKeyPressed(HSL_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed * delta;
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
 		if (Hassel::Input::IsKeyPressed(HSL_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed * delta;
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
 		else if (Hassel::Input::IsKeyPressed(HSL_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed * delta;
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 
 		if (Hassel::Input::IsKeyPressed(HSL_KEY_RIGHT_CONTROL))
-			m_CameraRotation += m_CameraRotationSpeed * delta;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		else if (Hassel::Input::IsKeyPressed(HSL_KEY_KP_0))
-			m_CameraRotation -= m_CameraRotationSpeed * delta;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 		m_Camera.SetPosition(m_CameraPosition);
 		m_Camera.SetRotation(m_CameraRotation);
@@ -172,9 +172,9 @@ private:
 	Hassel::OrthographicCamera m_Camera;
 
 	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 0.01f;
+	float m_CameraMoveSpeed = 1.0f;
 	float m_CameraRotation = 0;
-	float m_CameraRotationSpeed = 1;
+	float m_CameraRotationSpeed = 25.0f;
 };
 
 class Sandbox : public Hassel::Application {
