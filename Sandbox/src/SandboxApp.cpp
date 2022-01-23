@@ -153,9 +153,6 @@ public:
 
 		Hassel::Renderer::BeginScene(m_Camera);
 
-		glm::vec4 blueColor = { 0.2f, 0.3f, 0.8f, 1.0f };
-		glm::vec4 redColor = { 0.8f, 0.2f, 0.3f, 1.0f};
-
 		for (int y = 0; y < 20; y++)
 		{
 			for (int x = 0; x < 20; x++)
@@ -163,9 +160,9 @@ public:
 				glm::vec3 position(x * 0.11f, y * 0.11f, 0.0f);
 				glm::mat4 squareTransform = glm::translate(glm::mat4(1.0f), position) * squareScale;
 				if (x % 2 == 0)
-					m_FlatColorShader->UploadUniformFloat4("u_Color", redColor);
+					m_FlatColorShader->UploadUniformFloat4("u_Color", glm::vec4(firstColor[0], firstColor[1], firstColor[2], firstColor[3]));
 				else
-					m_FlatColorShader->UploadUniformFloat4("u_Color", blueColor);
+					m_FlatColorShader->UploadUniformFloat4("u_Color", glm::vec4(secondColor[0], secondColor[1], secondColor[2], secondColor[3]));
 
 				Hassel::Renderer::Submit(m_FlatColorShader, m_SquareVA, squareTransform);
 			}
@@ -182,7 +179,9 @@ public:
 
 	virtual void OnImGuiRender() override
 	{
-
+		ImGui::Text("Here you can change the color of the squares.%d");
+		ImGui::ColorEdit4("First color", firstColor);
+		ImGui::ColorEdit4("Second color", secondColor);
 	}
 
 private:
@@ -198,6 +197,9 @@ private:
 	float m_CameraMoveSpeed = 1.0f;
 	float m_CameraRotation = 0;
 	float m_CameraRotationSpeed = 25.0f;
+
+	float firstColor[4] = { 0.2f, 0.3f, 0.8f, 1.0f };
+	float secondColor[4] = { 0.8f, 0.2f, 0.3f, 1.0f };
 };
 
 class Sandbox : public Hassel::Application {
