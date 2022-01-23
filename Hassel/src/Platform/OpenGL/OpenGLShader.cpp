@@ -127,6 +127,12 @@ namespace Hassel
 		glUseProgram(0);
 	}
 
+	void OpenGLShader::UploadUniformFloat4(const std::string& name, const glm::vec4& value)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform4f(location, value.x, value.y, value.z, value.w);
+	}
+
 	void OpenGLShader::UploadUniformMat4(const std::string& name, const glm::mat4& matrix)
 	{
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
